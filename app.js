@@ -47,6 +47,7 @@ function findQuadrant(x, y) {
     } else {
         answer = x === 0 ? `(${x},${y}) is on the y axis` : answer;
         answer = y === 0 ? `(${x},${y}) is on the x axis` : answer;
+        answer = x === 0 && y === 0 ? `(${x},${y}) is the Origin` : answer;
         answer = x > 0 && y > 0 ? `(${x},${y}) is in Quadrant 1` : answer;
         answer = x < 0 && y > 0 ? `(${x},${y}) is in Quadrant 2` : answer;
         answer = x < 0 && y < 0 ? `(${x},${y}) is in Quadrant 3` : answer;
@@ -62,6 +63,7 @@ findQuadrant(-10,-8);
 findQuadrant(3,-9);
 findQuadrant(-2,5);
 findQuadrant('a','b');
+findQuadrant(0,0);
 
 // Exercise 4 Section
 console.log("EXERCISE 4:\n==========\n");
